@@ -59,4 +59,13 @@ public class SolutionTests
 
         Assert.AreEqual("", solution.GetRecipient("Hey @njaisankar your email id is njaisankar@gmail.com and git id is @jai-sankar_n!", 4));
     }
+
+    //Test case for user name contains any special character, separate out with rest of char
+    [Test]
+    public void UserNameWithSpecialCharacterTest()
+    {
+        var solution = new Solution();
+
+        Assert.AreEqual("jai-san", solution.GetRecipient("Hey @njaisankar your email id is njaisankar@gmail.com and git id is @jai-san#kar_n!", 3));
+    }
 }
