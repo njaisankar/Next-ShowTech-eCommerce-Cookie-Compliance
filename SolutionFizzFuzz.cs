@@ -17,7 +17,7 @@ public class Solution
         if(input>0)
         {
             //Multiples of 3 * 5
-            if(input==15)
+            if(input % 3 == 0 && input % 5 == 0)
             {
                 expectedResult = "FizzBuzz";
             }
@@ -50,7 +50,4 @@ public class Solution
         
         return expectedResult;
     }
-    
 }
-
-
